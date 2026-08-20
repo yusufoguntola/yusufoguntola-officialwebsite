@@ -1,16 +1,11 @@
-# React + Vite
+# Yusuf Oguntola
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This is my personal official website — a place to share my background, my work, my writing, and resources I've put together to help others learn.
 
-Currently, two official plugins are available:
+## Sections
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- **About** — who I am and how I work
+- **Experience** — my career history
+- **Learning Resources** — things I've built and shared publicly to help others learn
+- **Blog** — my writing on technology leadership, business strategy, and building infrastructure for African markets
+- **Press** — interviews and features
