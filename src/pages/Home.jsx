@@ -83,7 +83,7 @@ export default function Home() {
       <section className="bg-grain relative overflow-hidden">
         <div className="mx-auto max-w-3xl px-6 pb-16 pt-20 md:pt-28">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-soft px-3 py-1 font-mono text-xs text-green-deep">
-            <span className="h-1.5 w-1.5 rounded-full bg-green" />
+            <span aria-hidden="true">👋</span>
             Hi, I'm {profile.name.split(" ")[0]}
           </p>
           <h1 className="mb-6 font-display text-4xl font-semibold leading-[1.1] text-ink md:text-6xl">
