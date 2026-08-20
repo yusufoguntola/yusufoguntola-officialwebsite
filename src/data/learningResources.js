@@ -2,7 +2,7 @@
 // Add a new entry here whenever you publish something new — a repo, an article, a talk, a page.
 export const learningResources = [
   {
-    title: "SystemAdminComplete",
+    title: "System Administration Made Easy",
     type: "Free ebook",
     skill: "PC & Systems Administration",
     description:
@@ -10,7 +10,7 @@ export const learningResources = [
     url: "/downloads/SystemAdminComplete.pdf",
   },
   {
-    title: "Learning Blueprint",
+    title: "Software Developer Learning Blueprint",
     type: "Curriculum",
     skill: "Software Development",
     description:
