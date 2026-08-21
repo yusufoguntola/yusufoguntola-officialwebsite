@@ -14,7 +14,7 @@ export default function Experience() {
                 {job.start} — {job.end}
               </p>
             </div>
-            <p className="mb-3 text-sm font-medium text-brown-deep">
+            <p className="mb-3 text-sm font-medium text-accent-deep">
               {job.org} · {job.location}
             </p>
             <ul className="space-y-2 text-sm leading-relaxed text-ink/75">

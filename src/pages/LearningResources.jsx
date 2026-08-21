@@ -22,7 +22,7 @@ export default function LearningResources() {
             className="group flex flex-col rounded-2xl border border-line bg-card p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-green hover:shadow-md"
           >
             <div className="mb-3 flex items-center justify-between">
-              <span className="rounded-full bg-brown-soft px-2.5 py-1 font-mono text-xs uppercase tracking-wide text-brown-deep">
+              <span className="rounded-full bg-accent-soft px-2.5 py-1 font-mono text-xs uppercase tracking-wide text-accent-deep">
                 {r.type}
               </span>
               <span className="text-xs text-muted">{r.skill}</span>

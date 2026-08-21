@@ -15,9 +15,26 @@
   --color-green: #2f6b4d;
   --color-green-deep: #1e4a34;
   --color-green-soft: #e3ede4;
-  --color-brown: #a6642f;
-  --color-brown-deep: #7a481e;
-  --color-brown-soft: #f3e3cd;
+  --color-accent: #a6642f;
+  --color-accent-deep: #7a481e;
+  --color-accent-soft: #f3e3cd;
+}
+
+/* Alternate palette: a full green retint, toggled via data-theme on <html>.
+   Tones grounded in sas.votelens.ng's palette (--green:#12894a, mint tints, near-white bg). */
+[data-theme="green"] {
+  --color-cream: #f5f9f6;
+  --color-cream-2: #f1faf4;
+  --color-card: #ffffff;
+  --color-line: #e8efe9;
+  --color-ink: #0d1c14;
+  --color-muted: #566169;
+  --color-green: #12894a;
+  --color-green-deep: #064e2b;
+  --color-green-soft: #e2f4e9;
+  --color-accent: #16a34a;
+  --color-accent-deep: #0b6b39;
+  --color-accent-soft: #c6e9d3;
 }
 
 html {
@@ -43,7 +60,7 @@ h1, h2, h3, .font-display {
 .bg-grain {
   background-image:
     radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-green) 10%, transparent) 0%, transparent 45%),
-    radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--color-brown) 12%, transparent) 0%, transparent 40%);
+    radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--color-accent) 12%, transparent) 0%, transparent 40%);
 }
 
 .prose-blog h1, .prose-blog h2, .prose-blog h3 {
@@ -62,7 +79,7 @@ h1, h2, h3, .font-display {
 .prose-blog li { margin-bottom: 0.4em; line-height: 1.7; }
 .prose-blog ul { list-style: disc; }
 .prose-blog ol { list-style: decimal; }
-.prose-blog code { background: var(--color-cream-2); padding: 0.15em 0.4em; border-radius: 4px; font-family: var(--font-mono); font-size: 0.88em; color: var(--color-brown-deep); }
+.prose-blog code { background: var(--color-cream-2); padding: 0.15em 0.4em; border-radius: 4px; font-family: var(--font-mono); font-size: 0.88em; color: var(--color-accent-deep); }
 .prose-blog pre { background: var(--color-ink); border: 1px solid var(--color-line); padding: 1em; border-radius: 10px; overflow-x: auto; margin-bottom: 1.4em; }
 .prose-blog pre code { background: none; padding: 0; color: var(--color-cream); }
 .prose-blog blockquote { border-left: 3px solid var(--color-green); padding-left: 1em; color: var(--color-muted); font-style: italic; margin: 1.4em 0; }

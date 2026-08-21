@@ -4,9 +4,9 @@ import { posts } from "../lib/blog";
 
 const stats = [
   { value: "10+", label: "years in technology leadership", accent: "text-green-soft" },
-  { value: "60+", label: "engineers led", accent: "text-brown-soft" },
+  { value: "60+", label: "engineers led", accent: "text-accent-soft" },
   { value: "24/7", label: "always-on exchange engine, built from scratch", accent: "text-green-soft" },
-  { value: "3", label: "industry & academic awards", accent: "text-brown-soft" },
+  { value: "3", label: "industry & academic awards", accent: "text-accent-soft" },
 ];
 
 function StackIcon() {
@@ -57,7 +57,7 @@ const pillars = [
   },
   {
     icon: StrategyIcon,
-    tone: "brown",
+    tone: "accent",
     title: "Business strategy",
     body: "Grounded in Stanford Graduate School of Business's LEAD program, I've helped technology-driven organizations turn business strategy into plans their engineering teams can actually execute — and I take on strategy consulting engagements.",
   },
@@ -69,7 +69,7 @@ const pillars = [
   },
   {
     icon: TeamIcon,
-    tone: "brown",
+    tone: "accent",
     title: "Engineering leadership",
     body: "Lead cross-functional engineering, product, data and design teams end-to-end, aligning technology strategy with business objectives.",
   },
@@ -100,7 +100,7 @@ export default function Home() {
             </Link>
             <Link
               to="/about"
-              className="rounded-full border border-line bg-card px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-brown hover:text-brown-deep"
+              className="rounded-full border border-line bg-card px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent-deep"
             >
               About me
             </Link>
@@ -121,14 +121,14 @@ export default function Home() {
 
       <section className="border-b border-line/70">
         <div className="mx-auto max-w-5xl px-6 py-16">
-          <p className="mb-2 font-mono text-xs uppercase tracking-widest text-brown">Where I focus</p>
+          <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">Where I focus</p>
           <h2 className="mb-10 font-display text-2xl font-semibold text-ink md:text-3xl">
             What I bring to the table
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {pillars.map((p) => {
               const Icon = p.icon;
-              const badgeClass = p.tone === "green" ? "bg-green-soft text-green-deep" : "bg-brown-soft text-brown-deep";
+              const badgeClass = p.tone === "green" ? "bg-green-soft text-green-deep" : "bg-accent-soft text-accent-deep";
               return (
                 <div key={p.title} className="rounded-2xl border border-line bg-card p-6 shadow-sm">
                   <span className={`mb-4 flex h-11 w-11 items-center justify-center rounded-full ${badgeClass}`}>

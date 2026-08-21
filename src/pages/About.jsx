@@ -44,7 +44,7 @@ export default function About() {
         <div className="grid gap-8 md:grid-cols-2">
           {skillGroups.map((group) => (
             <div key={group.label} className="rounded-2xl border border-line bg-card p-6 shadow-sm">
-              <h3 className="mb-3 text-sm font-medium uppercase tracking-wide text-brown">
+              <h3 className="mb-3 text-sm font-medium uppercase tracking-wide text-accent">
                 {group.label}
               </h3>
               <ul className="space-y-2 text-sm text-ink/80">
@@ -68,7 +68,7 @@ export default function About() {
                 <p className="font-medium text-ink">{e.program}</p>
                 <p className="text-sm text-muted">{e.org}</p>
               </div>
-              <p className="font-mono text-sm text-brown-deep">{e.date}</p>
+              <p className="font-mono text-sm text-accent-deep">{e.date}</p>
             </div>
           ))}
         </div>
@@ -78,7 +78,7 @@ export default function About() {
         <ul className="space-y-3 text-sm text-ink/80">
           {awards.map((a) => (
             <li key={a} className="flex gap-3">
-              <span className="text-brown">—</span>
+              <span className="text-accent">—</span>
               <span>{a}</span>
             </li>
           ))}

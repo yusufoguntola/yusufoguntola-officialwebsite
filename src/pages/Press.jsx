@@ -19,7 +19,7 @@ export default function Press() {
             className="group block rounded-2xl border border-line bg-card p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-green hover:shadow-md"
           >
             <div className="mb-2 flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-brown-soft px-2.5 py-1 font-mono text-xs uppercase tracking-wide text-brown-deep">
+              <span className="rounded-full bg-accent-soft px-2.5 py-1 font-mono text-xs uppercase tracking-wide text-accent-deep">
                 {item.publication}
               </span>
               <span className="font-mono text-xs text-muted">{item.date}</span>

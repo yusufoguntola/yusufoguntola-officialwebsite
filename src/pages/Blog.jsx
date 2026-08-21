@@ -8,7 +8,7 @@ export default function Blog() {
       {posts.length === 0 ? (
         <p className="text-sm text-muted">
           No posts yet — add markdown files to{" "}
-          <code className="rounded bg-cream-2 px-1.5 py-0.5 font-mono text-brown-deep">
+          <code className="rounded bg-cream-2 px-1.5 py-0.5 font-mono text-accent-deep">
             blog_content/
           </code>{" "}
           to get started.
