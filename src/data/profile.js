@@ -9,7 +9,7 @@ export const profile = {
   summary:
     "I'm a technology leader with over a decade of experience building infrastructure at the intersection of engineering and business strategy. I've led cross-functional engineering, product, data and design teams end-to-end, and I care as much about aligning technology with business objectives as I do about the systems themselves — translating complex technical problems into clear, actionable plans for the people around me. Business strategy, sharpened through Stanford Graduate School of Business's LEAD program, is one of my strongest areas: I've helped companies turn technology investment into strategy that scales, and I take on strategy consulting engagements alongside my full-time work. My focus has been building resilient digital infrastructure for markets that usually get left out of it, from offline-first trading platforms to banking tools that work on a basic feature phone.",
   quote: {
-    text: "It's not enough to be a great frontend engineer — you need to have knowledge of each of the different expertise to successfully lead them.",
+    text: "Africa has a unique terrain, and one major mistake that we tend to make is seeing what’s happening overseas and trying to make the same thing work here. Yes, we can learn what’s happening there, but when we come back home to build solutions, we need to adapt them to our environment before trying to solve the problem.",
     source: "Built In Africa interview",
     sourceUrl: "https://www.builtinafrica.io/blog-post/yusuf-oguntola-afex-nigeria",
   },
@@ -29,7 +29,7 @@ export const qualifications = [
 export const skillGroups = [
   {
     label: "Languages & Frameworks",
-    items: ["Python", "Django", "React", "JavaScript", "Java (SE, FX, EE)", "C# MVC"],
+    items: ["Java (SE, FX, EE)", "Python", "Django", "React", "JavaScript", "C# MVC"],
   },
   {
     label: "Platforms & Tools",
@@ -37,14 +37,14 @@ export const skillGroups = [
   },
   {
     label: "Leadership",
-    items: ["Engineering org scaling", "Talent development & hiring", "Budgeting & resourcing"],
+    items: ["Technology organisation scaling", "Talent development & hiring", "Budgeting & resourcing", "Infrastructure Architecture"],
   },
   {
     label: "Business Strategy",
     items: [
       "Corporate & growth strategy (Stanford GSB LEAD)",
       "Cross-functional stakeholder management",
-      "Strategy consulting for scaling companies",
+      "Strategy consulting for scaling organisations",
     ],
   },
 ];
