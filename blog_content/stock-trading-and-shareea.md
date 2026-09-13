@@ -65,7 +65,7 @@ In classical jurisprudence, **no mathematical percentage or ratio screen can tra
 
 The fundamental objections of classical *fiqh* to quantitative financial screening include:
 
-### A. The Principle of Non-Contamination (*Al-Ḥalāl lā Yukhāliṭuh al-Ḥarām*)
+### A. The Principle of Non-Contamination (*Ikhtilāṭul-Ḥalāl bil-Ḥarām*)
 Classical law operates on the principle that when the permissible and the impermissible combine in a single contract, the impermissible element dominates (*idhā ijtamaʿa al-ḥalāl wa al-ḥarām ghalaba al-ḥarām*). A business that is 90% *halal* and 10% *ribā*-financed is not 90% pure; rather, the contract of partnership itself is vitiated (*fāsid*) due to the inclusion of unlawful terms.
 
 ### B. The Fallacy of Arbitrary Percentages
