@@ -1,11 +1,9 @@
 ---
-title: Stock trading - The jurisprudential reality.
+title: The Jurisprudential Reality of Equity Investment - A Classical Fiqh Perspective on Stock Trading
 date: 2026-09-13
 tags: [investment, islamic_jurisprudence, stock]
 excerpt: Classical law operates on the principle that when the permissible and the impermissible combine in a single contract, the impermissible element dominates (idhā ijtamaʿa al-ḥalāl wa al-ḥarām ghalaba al-ḥarām).
 ---
-
-# The Jurisprudential Reality of Equity Investment: A Classical *Fiqh* Perspective on Stock Trading
 
 In modern Islamic finance, equity screening methodologies—such as those published by AAOIFI, Dow Jones, or MSCI—have popularized the notion that a company's stock can be rendered "Shari'ah-compliant" even if the firm engages in interest-bearing debt or earns conventional interest income, provided these remain beneath certain percentage thresholds (e.g., 30% or 33%). 
 
