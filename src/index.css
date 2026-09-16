@@ -85,3 +85,60 @@ h1, h2, h3, .font-display {
 .prose-blog blockquote { border-left: 3px solid var(--color-green); padding-left: 1em; color: var(--color-muted); font-style: italic; margin: 1.4em 0; }
 .prose-blog img { border-radius: 10px; margin: 1.4em 0; }
 .prose-blog hr { border-color: var(--color-line); margin: 2em 0; }
+
+/* Tables. The default look is a header rule plus faint row lines; a post can pick
+   another look with a `{table: ...}` marker — see src/lib/remarkTableStyle.js. */
+.prose-blog .table-wrap { margin: 1.6em 0; overflow-x: auto; }
+.prose-blog table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #4b4135;
+  text-align: left;
+}
+.prose-blog th,
+.prose-blog td {
+  padding: 0.7em 0.95em;
+  vertical-align: top;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-line) 65%, transparent);
+}
+.prose-blog th:first-child,
+.prose-blog td:first-child { padding-left: 0; }
+.prose-blog th:last-child,
+.prose-blog td:last-child { padding-right: 0; }
+.prose-blog thead th {
+  font-weight: 600;
+  color: var(--color-ink);
+  border-bottom: 1px solid var(--color-line);
+}
+.prose-blog tbody tr:last-child td { border-bottom: none; }
+.prose-blog td strong { color: var(--color-ink); }
+
+/* {table: bordered} — a full grid. */
+.prose-blog table.table-bordered { border: 1px solid var(--color-line); }
+.prose-blog table.table-bordered th,
+.prose-blog table.table-bordered td {
+  border: 1px solid color-mix(in srgb, var(--color-line) 75%, transparent);
+  padding-left: 0.95em;
+  padding-right: 0.95em;
+}
+.prose-blog table.table-bordered thead th { background: color-mix(in srgb, var(--color-cream-2) 45%, transparent); }
+
+/* {table: borderless} — no rules at all. */
+.prose-blog table.table-borderless th,
+.prose-blog table.table-borderless td { border: none; }
+
+/* {table: rows} — the default, spelled out so a post can be explicit. */
+.prose-blog table.table-rows th,
+.prose-blog table.table-rows td { border-left: none; border-right: none; }
+
+/* {table: striped} — zebra body rows. */
+.prose-blog table.table-striped tbody tr:nth-child(odd) { background: color-mix(in srgb, var(--color-cream-2) 40%, transparent); }
+.prose-blog table.table-striped th,
+.prose-blog table.table-striped td { padding-left: 0.95em; padding-right: 0.95em; }
+
+/* {table: compact} — tighter cells for dense data. */
+.prose-blog table.table-compact { font-size: 0.85rem; }
+.prose-blog table.table-compact th,
+.prose-blog table.table-compact td { padding-top: 0.4em; padding-bottom: 0.4em; }

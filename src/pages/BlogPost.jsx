@@ -2,6 +2,16 @@ import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPost } from "../lib/blog";
+import remarkTableStyle from "../lib/remarkTableStyle";
+
+// Tables keep their own horizontal scroll so a wide one never widens the page.
+const markdownComponents = {
+  table: ({ node: _node, ...props }) => (
+    <div className="table-wrap">
+      <table {...props} />
+    </div>
+  ),
+};
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -19,7 +29,7 @@ export default function BlogPost() {
   }
 
   return (
-    <article className="mx-auto max-w-3xl px-6 py-16">
+    <article className="mx-auto max-w-3xl px-6 py-16 lg:max-w-4xl">
       <Link to="/blog" className="mb-8 inline-block text-sm font-medium text-green hover:text-green-deep hover:underline">
         ← Back to blog
       </Link>
@@ -38,7 +48,9 @@ export default function BlogPost() {
       </h1>
 
       <div className="prose-blog">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm, remarkTableStyle]} components={markdownComponents}>
+          {post.content}
+        </ReactMarkdown>
       </div>
     </article>
   );
