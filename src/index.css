@@ -101,7 +101,12 @@ h1, h2, h3, .font-display {
 .prose-blog td {
   padding: 0.7em 0.95em;
   vertical-align: top;
-  border-bottom: 1px solid color-mix(in srgb, var(--color-line) 65%, transparent);
+  /* Solid fallback first: on a high-DPI phone screen, a translucent 1px line is
+     thin enough that anti-aliasing can wash it out almost entirely against this
+     low-contrast palette, so the row rule needs to stay solid, not mixed with
+     transparent (the header rule above it is solid and stays visible for the
+     same reason). */
+  border-bottom: 1px solid var(--color-line);
 }
 .prose-blog th:first-child,
 .prose-blog td:first-child { padding-left: 0; }
@@ -119,7 +124,7 @@ h1, h2, h3, .font-display {
 .prose-blog table.table-bordered { border: 1px solid var(--color-line); }
 .prose-blog table.table-bordered th,
 .prose-blog table.table-bordered td {
-  border: 1px solid color-mix(in srgb, var(--color-line) 75%, transparent);
+  border: 1px solid var(--color-line);
   padding-left: 0.95em;
   padding-right: 0.95em;
 }
