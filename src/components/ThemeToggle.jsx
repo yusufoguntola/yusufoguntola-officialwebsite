@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 
 function getInitialTheme() {
-  return localStorage.getItem("theme") === "green" ? "green" : "brown";
+  // Green is the default; a visitor only sees brown once they've explicitly
+  // switched to it (mirrors the no-FOUC check in index.html).
+  return localStorage.getItem("theme") === "brown" ? "brown" : "green";
 }
 
 export default function ThemeToggle() {
