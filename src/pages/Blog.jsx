@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import Section from "../components/Section";
 import { posts } from "../lib/blog";
+import usePageMeta from "../lib/usePageMeta";
 
 export default function Blog() {
+  usePageMeta({
+    title: "Blog — Yusuf Oguntola",
+    description: "Writing on technology leadership, business strategy, and building infrastructure for African markets.",
+  });
+
   return (
     <Section eyebrow="Writing" title="Blog">
       {posts.length === 0 ? (

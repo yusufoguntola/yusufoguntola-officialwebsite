@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPost } from "../lib/blog";
 import remarkTableStyle from "../lib/remarkTableStyle";
+import usePageMeta from "../lib/usePageMeta";
 
 // Tables keep their own horizontal scroll so a wide one never widens the page.
 // External reference links open in a new tab; an in-page anchor (#section) or a
@@ -28,6 +29,12 @@ const markdownComponents = {
 export default function BlogPost() {
   const { slug } = useParams();
   const post = getPost(slug);
+
+  usePageMeta(
+    post
+      ? { title: `${post.title} — Yusuf Oguntola`, description: post.excerpt, type: "article" }
+      : { title: "Post not found — Yusuf Oguntola" }
+  );
 
   if (!post) {
     return (
