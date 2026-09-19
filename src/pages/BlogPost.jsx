@@ -5,12 +5,24 @@ import { getPost } from "../lib/blog";
 import remarkTableStyle from "../lib/remarkTableStyle";
 
 // Tables keep their own horizontal scroll so a wide one never widens the page.
+// External reference links open in a new tab; an in-page anchor (#section) or a
+// future relative link stays in the same tab.
 const markdownComponents = {
   table: ({ node: _node, ...props }) => (
     <div className="table-wrap">
       <table {...props} />
     </div>
   ),
+  a: ({ node: _node, href, ...props }) => {
+    const isExternal = /^https?:\/\//i.test(href || "");
+    return (
+      <a
+        href={href}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        {...props}
+      />
+    );
+  },
 };
 
 export default function BlogPost() {
