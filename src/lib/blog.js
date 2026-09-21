@@ -16,6 +16,7 @@ export const posts = Object.entries(files)
       date: meta.date || "",
       tags: Array.isArray(meta.tags) ? meta.tags : meta.tags ? [meta.tags] : [],
       excerpt: meta.excerpt || "",
+      image: meta.image || "",
       content,
     };
   })

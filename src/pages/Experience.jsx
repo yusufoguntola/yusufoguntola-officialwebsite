@@ -1,7 +1,13 @@
 import Section from "../components/Section";
 import { experience } from "../data/profile";
+import usePageMeta from "../lib/usePageMeta";
 
 export default function Experience() {
+  usePageMeta({
+    title: "Experience — Yusuf Oguntola",
+    description: "A career timeline of the engineering and technology leadership roles Yusuf Oguntola has held, from individual contributor to leading teams of 60+.",
+  });
+
   return (
     <Section eyebrow="Career" title="Experience">
       <div className="relative space-y-10 border-l-2 border-line pl-8">

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { profile } from "../data/profile";
 import { posts } from "../lib/blog";
+import usePageMeta from "../lib/usePageMeta";
 
 const stats = [
   { value: "10+", label: "years in technology leadership", accent: "text-green-soft" },
@@ -76,6 +77,12 @@ const pillars = [
 ];
 
 export default function Home() {
+  usePageMeta({
+    title: "Yusuf Oguntola — Information Technology Leader",
+    description:
+      "Yusuf Olawale Oguntola — a seasoned technology leader driving innovation at the intersection of technology and business in Africa. Technology leadership, System Architecture Design, and Business Strategy.",
+  });
+
   const latestPosts = posts.slice(0, 2);
 
   return (

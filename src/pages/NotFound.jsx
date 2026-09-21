@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import usePageMeta from "../lib/usePageMeta";
 
 export default function NotFound() {
+  usePageMeta({ title: "Page not found — Yusuf Oguntola", noindex: true });
+
   return (
     <div className="mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center">
       <p className="mb-3 font-mono text-sm text-accent">404</p>

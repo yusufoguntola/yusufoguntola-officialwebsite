@@ -1,7 +1,13 @@
 import Section from "../components/Section";
 import { interviews } from "../data/interviews";
+import usePageMeta from "../lib/usePageMeta";
 
 export default function Press() {
+  usePageMeta({
+    title: "Press — Yusuf Oguntola",
+    description: "Interviews and features where Yusuf Oguntola has talked publicly about technology leadership, business strategy, and the teams behind the work.",
+  });
+
   return (
     <Section eyebrow="Press" title="Interviews & features">
       <p className="mb-10 max-w-2xl text-sm leading-relaxed text-muted">

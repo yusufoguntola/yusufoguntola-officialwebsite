@@ -1,7 +1,13 @@
 import Section from "../components/Section";
 import { learningResources } from "../data/learningResources";
+import usePageMeta from "../lib/usePageMeta";
 
 export default function LearningResources() {
+  usePageMeta({
+    title: "Learning Resources — Yusuf Oguntola",
+    description: "Projects, write-ups and tools Yusuf Oguntola has personally built and shared publicly — code you can read, fork, or learn a specific skill from.",
+  });
+
   return (
     <Section
       eyebrow="Learning resources"

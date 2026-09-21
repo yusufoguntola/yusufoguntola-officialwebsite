@@ -1,7 +1,28 @@
 import Section from "../components/Section";
 import { profile, qualifications, skillGroups, education, awards } from "../data/profile";
+import usePageMeta from "../lib/usePageMeta";
+import { SITE_URL } from "../lib/siteConfig";
 
 export default function About() {
+  const shortBio =
+    "Technology leader with over a decade of experience building infrastructure at the intersection of engineering and business strategy, sharpened through Stanford GSB's LEAD program.";
+
+  usePageMeta({
+    title: "About — Yusuf Oguntola",
+    description: shortBio,
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: profile.name,
+      alternateName: "Yusuf Oguntola",
+      url: `${SITE_URL}/about`,
+      image: `${SITE_URL}/profile_img.jpg`,
+      description: shortBio,
+      email: `mailto:${profile.email}`,
+      sameAs: [profile.linkedin, profile.github],
+    },
+  });
+
   return (
     <div>
       <Section eyebrow="About" title="A bit about me">
@@ -9,6 +30,9 @@ export default function About() {
           <img
             src="/profile_img.jpg"
             alt="Yusuf Oguntola's profile picture, used across his social and professional profiles"
+            width="282"
+            height="282"
+            loading="eager"
             className="h-16 w-16 flex-shrink-0 rounded-full border-2 border-card object-cover shadow-sm"
           />
           <p className="text-sm text-muted">

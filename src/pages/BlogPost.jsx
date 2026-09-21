@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import { getPost } from "../lib/blog";
 import remarkTableStyle from "../lib/remarkTableStyle";
 import usePageMeta from "../lib/usePageMeta";
+import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from "../lib/siteConfig";
 
 // Tables keep their own horizontal scroll so a wide one never widens the page.
 // External reference links open in a new tab; an in-page anchor (#section) or a
@@ -24,16 +25,38 @@ const markdownComponents = {
       />
     );
   },
+  img: ({ node: _node, ...props }) => <img loading="lazy" {...props} />,
 };
 
 export default function BlogPost() {
   const { slug } = useParams();
   const post = getPost(slug);
 
+  const postImage = post?.image ? `${SITE_URL}${post.image}` : DEFAULT_OG_IMAGE;
+  const postUrl = post ? `${SITE_URL}/blog/${post.slug}` : undefined;
+
   usePageMeta(
     post
-      ? { title: `${post.title} — Yusuf Oguntola`, description: post.excerpt, type: "article" }
-      : { title: "Post not found — Yusuf Oguntola" }
+      ? {
+          title: `${post.title} — Yusuf Oguntola`,
+          description: post.excerpt,
+          type: "article",
+          image: postImage,
+          jsonLd: {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            description: post.excerpt,
+            datePublished: post.date,
+            author: {
+              "@type": "Person",
+              name: SITE_NAME,
+            },
+            image: postImage,
+            url: postUrl,
+          },
+        }
+      : { title: "Post not found — Yusuf Oguntola", noindex: true }
   );
 
   if (!post) {

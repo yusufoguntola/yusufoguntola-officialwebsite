@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /resume.pdf
+Disallow: /downloads/
+
+Sitemap: https://yusufoguntola.com/sitemap.xml
