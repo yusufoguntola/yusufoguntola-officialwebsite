@@ -7,8 +7,8 @@
 //   ---
 //
 // Plain JS with no Vite-specific imports, so it can run both in the browser
-// bundle (via blog.js) and in the plain Node prerender script (see
-// scripts/prerender-blog-meta.mjs) without pulling in a bundler.
+// bundle (via blog.js) and in the plain Node build script (see
+// scripts/postbuild.mjs) without pulling in a bundler.
 export function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!match) return { meta: {}, content: raw };
@@ -41,4 +41,13 @@ export function parseFrontmatter(raw) {
 
 export function slugFromPath(path) {
   return path.split("/").pop().replace(/\.md$/, "");
+}
+
+// Frontmatter dates are plain "YYYY-MM-DD" — fine for display, but
+// schema.org/Google's structured data validator wants an ISO 8601
+// datetime with an explicit timezone for datePublished. Midnight UTC is
+// an arbitrary but stable choice since posts only carry a date, not a time.
+export function toIsoDateTime(dateStr) {
+  if (!dateStr || /T/.test(dateStr)) return dateStr;
+  return `${dateStr}T00:00:00+00:00`;
 }

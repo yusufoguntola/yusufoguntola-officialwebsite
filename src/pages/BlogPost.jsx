@@ -5,6 +5,7 @@ import { getPost } from "../lib/blog";
 import remarkTableStyle from "../lib/remarkTableStyle";
 import usePageMeta from "../lib/usePageMeta";
 import { SITE_URL, SITE_NAME, DEFAULT_OG_IMAGE } from "../lib/siteConfig";
+import { toIsoDateTime } from "../lib/frontmatter";
 
 // Tables keep their own horizontal scroll so a wide one never widens the page.
 // External reference links open in a new tab; an in-page anchor (#section) or a
@@ -47,10 +48,11 @@ export default function BlogPost() {
             "@type": "BlogPosting",
             headline: post.title,
             description: post.excerpt,
-            datePublished: post.date,
+            datePublished: toIsoDateTime(post.date),
             author: {
               "@type": "Person",
               name: SITE_NAME,
+              url: `${SITE_URL}/about`,
             },
             image: postImage,
             url: postUrl,

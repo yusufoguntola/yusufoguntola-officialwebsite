@@ -20,7 +20,7 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { parseFrontmatter, slugFromPath } from "../src/lib/frontmatter.js";
+import { parseFrontmatter, slugFromPath, toIsoDateTime } from "../src/lib/frontmatter.js";
 import { SITE_URL, SITE_NAME } from "../src/lib/siteConfig.js";
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -119,8 +119,8 @@ for (const post of posts) {
       "@type": "BlogPosting",
       headline: post.title,
       description,
-      datePublished: post.date,
-      author: { "@type": "Person", name: SITE_NAME },
+      datePublished: toIsoDateTime(post.date),
+      author: { "@type": "Person", name: SITE_NAME, url: `${SITE_URL}/about` },
       image,
       url,
     },
