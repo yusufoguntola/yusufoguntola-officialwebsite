@@ -46,10 +46,18 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   text-align: justify;
+  text-justify: inter-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
+/* Justify reads well for paragraph copy but breaks down on big display
+   headings — with only a handful of words per line, one gap has to stretch
+   to fill the whole line width. Headings stay left-aligned and unhyphenated. */
 h1, h2, h3, .font-display {
   font-family: var(--font-serif);
+  text-align: left;
+  hyphens: none;
 }
 
 ::selection {

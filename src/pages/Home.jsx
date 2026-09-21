@@ -97,7 +97,7 @@ export default function Home() {
             Driving <span className="text-green">innovation</span> at the intersection of
             technology and business in Africa.
           </h1>
-          <p className="mb-9 max-w-xl text-base leading-relaxed text-muted">{profile.tagline}</p>
+          <p className="mb-9 text-base leading-relaxed text-muted">{profile.tagline}</p>
           <div className="flex flex-wrap gap-3">
             <Link
               to="/experience"
